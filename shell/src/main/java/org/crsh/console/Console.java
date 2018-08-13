@@ -110,7 +110,7 @@ public class Console {
   }
 
   /**
-   * Initiali
+   * Initialize
    */
   public void init() {
     // Take care of pormpt
@@ -180,6 +180,7 @@ public class Console {
 
   /**
    * Switch to edit.
+   * @return Editor
    */
   Editor edit() {
     String prompt = shell.getPrompt();

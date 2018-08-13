@@ -177,7 +177,7 @@ final class EditorBuffer implements Appendable, Iterator<String> {
    *
    * @param c the char to overwrite
    * @return true if it happended
-   * @throws IOException
+   * @throws IOException any io exception
    */
   boolean moveRight(char c) throws IOException {
     if (cursor < current.length()) {
@@ -244,6 +244,7 @@ final class EditorBuffer implements Appendable, Iterator<String> {
   int del() throws IOException {
     int ret = appendDel();
     if (ret != -1) {
+
       needFlush = true;
     }
     return ret;

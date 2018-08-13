@@ -74,6 +74,7 @@ public class GroovyCompiler implements org.crsh.lang.spi.Compiler {
   /**
    * The underlying groovu shell used for the REPL.
    *
+   * @param session - session
    * @return a groovy shell operating on the session attributes
    */
   public static GroovyShell getGroovyShell(ShellSession session) {

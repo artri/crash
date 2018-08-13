@@ -65,7 +65,7 @@ public abstract class Format {
    * Print the specified <code>command</code> to the <code>stream</code>
    * @param command the command to print
    * @param stream the output
-   * @throws IOException
+   * @throws IOException any io exception
    */
   public abstract void print(CommandDescriptor<?> command, Appendable stream) throws IOException;
 

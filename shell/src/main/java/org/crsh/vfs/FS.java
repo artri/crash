@@ -56,12 +56,21 @@ public class FS {
      *
      * @param name the registration name
      * @param resolver the resolver implementation
+     * @return Builder
      */
     public Builder register(String name, FSMountFactory<?> resolver) {
       resolvers.put(name, resolver);
       return this;
     }
 
+    /**
+     *
+     * @param name - name
+     * @param path - path
+     * @return Builder
+     * @throws IOException any io exception
+     * @throws IllegalArgumentException if no resolver found by name
+     */
     public Builder mount(String name, Path path) throws IOException, IllegalArgumentException {
       FSMountFactory<?> resolver = resolvers.get(name);
       if (resolver == null) {

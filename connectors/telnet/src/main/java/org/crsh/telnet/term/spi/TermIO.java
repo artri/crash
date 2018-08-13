@@ -63,6 +63,7 @@ public interface TermIO extends Closeable {
    * is invoked.
    *
    * @return true if the alternate buffer is shown
+   * @throws IOException any io exception
    */
   boolean takeAlternateBuffer() throws IOException;
 
@@ -72,6 +73,7 @@ public interface TermIO extends Closeable {
    * is invoked.
    *
    * @return true if the usual buffer is shown
+   * @throws IOException any io exception
    */
   boolean releaseAlternateBuffer() throws IOException;
 

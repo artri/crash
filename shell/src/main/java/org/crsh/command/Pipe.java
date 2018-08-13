@@ -52,6 +52,7 @@ public abstract class Pipe<C, P> implements Filter<C, P, InvocationContext<P>> {
 
   /**
    * Open pipe.
+   * @throws Exception any exception
    */
   public void open() throws Exception {
   }

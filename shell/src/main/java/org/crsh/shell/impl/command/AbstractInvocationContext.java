@@ -26,7 +26,7 @@ import org.crsh.command.InvocationContext;
 public abstract class AbstractInvocationContext<P> implements InvocationContext<P> {
 
   /**
-   * Implement the <code><<</code> operator for Groovy.
+   * Implement the <code>&lt;&lt;</code> operator for Groovy.
    *
    * @param o the object
    * @return this invocation context

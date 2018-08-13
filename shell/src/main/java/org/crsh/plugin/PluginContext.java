@@ -71,14 +71,16 @@ public final class PluginContext {
   /**
    * Create a new plugin context with preconfigured executor and scanner, this is equivalent to invoking:
    *
-   * <code><pre>new PluginContext(
+   * <code>
+   *  new PluginContext(
    *    Executors.newFixedThreadPool(20),
    *    new ScheduledThreadPoolExecutor(1),
    *    discovery,
    *    attributes,
    *    cmdFS,
    *    confFS,
-   *    loader);</pre></code>
+   *    loader);
+   * </code>
    *
    * @param discovery the plugin discovery
    * @param cmdFS the command file system

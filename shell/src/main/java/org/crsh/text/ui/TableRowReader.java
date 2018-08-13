@@ -52,10 +52,10 @@ class TableRowReader implements LineReader {
   private final int height;
 
   /**
-   * 0 -> render top
-   * 1 -> render cells
-   * 2 -> render bottom
-   * 3 -> done
+   * 0 will render top
+   * 1 will render cells
+   * 2 will render bottom
+   * 3 will done
    */
   private int status;
 

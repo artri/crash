@@ -228,7 +228,7 @@ public class Utils {
   }
 
   /**
-<<<<<<< HEAD
+   *
    * Close the socket and catch any exception thrown.
    *
    * @param socket the socket to close
@@ -447,7 +447,10 @@ public class Utils {
   }
 
   /**
-   * @see #findLongestCommonPrefix(Iterable)
+   * Find the longest possible common prefix of the provided char sequence.
+   *
+   * @param seqs the sequences
+   * @return the longest possible prefix
    */
   public static String findLongestCommonPrefix(CharSequence... seqs) {
     return findLongestCommonPrefix(Arrays.asList(seqs));
@@ -680,11 +683,11 @@ public class Utils {
    * with the <code>:-</code> separator:
    *
    * <ul>
-   *   <li><code>{}</code> + "foo" => "foo"</li>
-   *   <li><code>{}</code> + "${foo}" => ""</li>
-   *   <li><code>{}</code> + "\\${foo}" => "${foo}"</li>
-   *   <li><code>{foo:bar}</code> + "${foo}" => "bar"</li>
-   *   <li><code>{}</code> + "${foo:-bar}" => "bar"</li>
+   *   <li><code>{}</code> + "foo" =&gt; "foo"</li>
+   *   <li><code>{}</code> + "${foo}" =&gt; ""</li>
+   *   <li><code>{}</code> + "\\${foo}" =&gt; "${foo}"</li>
+   *   <li><code>{foo:bar}</code> + "${foo}" =v "bar"</li>
+   *   <li><code>{}</code> + "${foo:-bar}" =&gt; "bar"</li>
    * </ul>
    *
    * @param interpolated the value to interpolate

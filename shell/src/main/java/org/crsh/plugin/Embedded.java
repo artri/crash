@@ -34,7 +34,9 @@ public class Embedded extends PluginLifeCycle {
   /**
    * Create the plugin context, allow subclasses to customize it.
    *
+   * @param attributes -
    * @param discovery the plugin discovery
+   * @param loader -
    * @return the plugin context
    */
   protected PluginContext create(Map<String, Object> attributes, PluginDiscovery discovery, ClassLoader loader) {
@@ -58,7 +60,9 @@ public class Embedded extends PluginLifeCycle {
   /**
    * Create and start the plugin context.
    *
+   * @param attributes -
    * @param discovery the plugin discovery
+   * @param loader -
    * @return the plugin context
    */
   protected PluginContext start(Map<String, Object> attributes, PluginDiscovery discovery, ClassLoader loader) {
@@ -74,6 +78,7 @@ public class Embedded extends PluginLifeCycle {
    * Create the command file system from the <code>crash.mountpointconfig.cmd</code> servlet context parameter.
    *
    * @return the command file system
+   * @throws IOException any io exception
    */
   protected FS createCommandFS() throws IOException {
     return createFS(resolveCmdMountPointConfig());
@@ -83,6 +88,7 @@ public class Embedded extends PluginLifeCycle {
    * Create the conf file system from the <code>crash.mountpointconfig.conf</code> servlet context parameter.
    *
    * @return the conf file system
+   * @throws IOException any io exception
    */
   protected FS createConfFS() throws IOException {
     return createFS(resolveConfMountPointConfig());

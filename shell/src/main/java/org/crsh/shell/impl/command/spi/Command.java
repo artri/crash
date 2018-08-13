@@ -109,6 +109,7 @@ public abstract class Command<T> {
    * @param context the command context
    * @param line the original command line arguments
    * @return the completions
+   * @throws CommandException on exception
    */
   public final CompletionMatch complete(RuntimeContext context, String line) throws CommandException {
     CompletionMatcher matcher = getDescriptor().completer();
@@ -128,6 +129,7 @@ public abstract class Command<T> {
    * @param line the usage line
    * @param format the description format
    * @return the description
+   * @throws CommandException on exception
    */
   public final String describe(String line, Format format) throws CommandException {
     CommandDescriptor<T> descriptor = getDescriptor();
@@ -147,11 +149,19 @@ public abstract class Command<T> {
    *
    * @param line the command line arguments
    * @return the command
+   * @throws CommandException on exception
    */
   public final CommandInvoker<?, ?> resolveInvoker(String line) throws CommandException {
     return resolveCommand(line).getInvoker();
   }
 
+  /**
+   * Provides an invoker for the command line specified as a command line to parse.
+   *
+   * @param line the command line arguments
+   * @return the command
+   * @throws CommandException on exception
+   */
   public final CommandMatch<?, ?> resolveCommand(String line) throws CommandException {
     CommandDescriptor<T> descriptor = getDescriptor();
     InvocationMatcher<T> analyzer = descriptor.matcher();
@@ -173,6 +183,7 @@ public abstract class Command<T> {
    * @param subordinateOptions the subordinate options
    * @param arguments arguments
    * @return the command
+   * @throws CommandException on exception
    */
   public final CommandMatch<?, ?> resolveCommand(Map<String, ?> options, String subordinate, Map<String, ?> subordinateOptions, List<?> arguments) throws CommandException {
     InvocationMatcher<T> matcher = getDescriptor().matcher();

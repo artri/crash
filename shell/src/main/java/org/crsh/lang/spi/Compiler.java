@@ -42,12 +42,19 @@ public interface Compiler {
    *
    * @param name the command name
    * @param source the command source  @return the command or null if no command can be resolved
+   * @return CommandResolution
    * @throws org.crsh.shell.impl.command.spi.CommandException when the command exists but cannot be created
    * @throws NullPointerException if the command name is null
    */
   CommandResolution compileCommand(String name, byte[] source) throws CommandException, NullPointerException;
 
-  //
+  /**
+   * Perform callback
+   * @param session - session
+   * @param name - name
+   * @param defaultValue - defaultValue
+   * @return String
+   */
   String doCallBack(ShellSession session, String name, String defaultValue);
 
 }

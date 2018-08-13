@@ -20,7 +20,6 @@
 package org.crsh.standalone;
 
 import com.sun.tools.attach.VirtualMachine;
-import jline.AnsiWindowsTerminal;
 import jline.Terminal;
 import jline.TerminalFactory;
 import jline.console.ConsoleReader;

@@ -28,13 +28,13 @@ import java.util.Arrays;
 
 /**
  * A control for the text stylistric attributes:
- * <u>
+ * <ul>
  *   <li>background color</li>
  *   <li>foreground color</li>
  *   <li>underline</li>
  *   <li>bold</li>
  *   <li>blink</li>
- * </u>
+ * </ul>
  *
  * A style is either a composite style or the {@link #reset} style. Styles can be composed together to form a new
  * style <code>style.merge(other)</code>.

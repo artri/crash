@@ -28,7 +28,7 @@ public abstract class CommandMatch<C, P> {
 
   /**
    * @return an invoker for this command.
-   * @throws CommandException
+   * @throws CommandException on exception
    */
   public abstract CommandInvoker<C, P> getInvoker() throws CommandException;
 
